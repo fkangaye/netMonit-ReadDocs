@@ -79,33 +79,41 @@ NMap Endpoints Example
 Project layout
 --------------
 
-.. code-block::
 
-   ShellController    # expose 2 endpoints and call the services.
-   Services/
-         NetStatService  
-         NMapSErvive     
-   CommandExcecutor/ Reusable class to exceute command
-       NetStatExecCommand  # Delegate Netstat command to CommandExceutor class.
-       NMapExecCommand     # Delegate NMap command to CommandExceutor class.     
-   Models
-       List of Enum NetStat flag that can be passed
-       List of Netstat protocol in Enum format
-       List of NMap flags
-   Scripts
-       netstat.sh
-       nmap.sh
-       stat_count.sh
+* ShellController    # expose 2 endpoints and call the services.
 
+  * Services
+
+    * NetStatService  
+
+      * NMapSErvive     
+
+  * CommandExcecutor Reusable class to exceute command
+
+    * NetStatExecCommand  # Delegate Netstat command to CommandExceutor class.
+    * NMapExecCommand     # Delegate NMap command to CommandExceutor class.     
+
+  * Models
+
+    * List of Enum NetStat flag that can be passed
+    * List of Netstat protocol in Enum format
+    * List of NMap flags
+
+  * Scripts
+
+    * netstat.sh
+    * nmap.sh
+    * stat_count.sh
 
 TODO
 ----
 
-.. code-block::
 
-   Add more Endpoint to ShellController
-       User # Retrieve specific information about a user
-       Info # General info about the use like `Who`
-       firewall # monitor communication through firewall
-       packetCapture # capture packets
-   Build Dashboard for different insights collected from the apis
+* Add more Endpoint to ShellController
+
+  * User # Retrieve specific information about a user
+  * Info # General info about the use like ``Who``
+  * firewall # monitor communication through firewall
+  * packetCapture # capture packets
+
+* Build Dashboard for different insights collected from the apis
